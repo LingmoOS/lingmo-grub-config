@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# backup old grub config if needed
+
+if [ -f "/etc/default/grub" ]; then
+    rm /etc/default/grub
+    mv /etc/default/grub.backup /etc/default/grub
+fi
+
+if [ -f "/usr/share/grub/default/grub" ]; then
+    rm /usr/share/grub/default/grub
+    mv /usr/share/grub/default/grub.backup /usr/share/grub/default/grub
+fi

@@ -6,4 +6,9 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/boot
 
         DESTINATION / )
 
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/usr
+
+        DESTINATION / )
+
+
 
