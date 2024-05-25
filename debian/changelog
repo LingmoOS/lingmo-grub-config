@@ -1,3 +1,10 @@
+lingmo-grub-config (2.0.0-lingmo~a2) unstable; urgency=medium
+
+  [ Elysia ]
+  * Remove conflict config
+
+ -- Elysia <c.elysia@foxmail.com>  Sat, 25 May 2024 22:53:21 +0800
+
 lingmo-grub-config (2.0.0-lingmo~a1) unstable; urgency=medium
 
   [ Elysia ]
