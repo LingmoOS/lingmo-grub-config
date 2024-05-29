@@ -1,11 +1,24 @@
 #!/usr/bin/bash
 
-# backup old grub config if needed
+FILE="/etc/default/grub"
+DISTRIBUTOR_LINE='GRUB_DISTRIBUTOR="Lingmo OS"'
+THEME_LINE='GRUB_THEME="/boot/grub/themes/lingmo/theme.txt"'
 
-# Make sure the displayed text is Lingmo OS
-sed -i 's/^#\?GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Lingmo OS"/' /etc/default/grub
+# 如果文件中没有找到 GRUB_DISTRIBUTOR 或 #GRUB_DISTRIBUTOR，就添加它
+if ! grep -qE '^#?GRUB_DISTRIBUTOR=' "$FILE"; then
+  echo "$DISTRIBUTOR_LINE" >> "$FILE"
+else
+  # 否则，替换已有的值
+  sed -i 's/^#\?GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Lingmo OS"/' "$FILE"
+fi
 
-sed -i 's/^#\?GRUB_THEME=.*/GRUB_THEME="\/boot\/grub\/themes\/lingmo\/theme.txt"/' /etc/default/grub
+# 如果文件中没有找到 GRUB_THEME 或 #GRUB_THEME，就添加它
+if ! grep -qE '^#?GRUB_THEME=' "$FILE"; then
+  echo "$THEME_LINE" >> "$FILE"
+else
+  # 否则，替换已有的值
+  sed -i 's/^#\?GRUB_THEME=.*/GRUB_THEME="\/boot\/grub\/themes\/lingmo\/theme.txt"/' "$FILE"
+fi
 
 # Update GRUB config
 /usr/sbin/update-grub
