@@ -20,5 +20,5 @@ else
   sed -i 's/^#\?GRUB_THEME=.*/GRUB_THEME="\/boot\/grub\/themes\/lingmo\/theme.txt"/' "$FILE"
 fi
 
-# Update GRUB config
-/usr/sbin/update-grub
+# Try to update GRUB config, it is okay to fail
+/usr/sbin/update-grub | true
