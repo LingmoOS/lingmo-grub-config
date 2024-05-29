@@ -2,13 +2,10 @@
 
 # backup old grub config if needed
 
-if [ -f "/etc/default/grub" ]; then
-    mv /etc/default/grub /etc/default/grub.backup
-fi
+# Make sure the displayed text is Lingmo OS
+sed -i 's/^#\?GRUB_DISTRIBUTOR=.*/GRUB_DISTRIBUTOR="Lingmo OS"/' /etc/default/grub
 
-if [ -f "/usr/share/grub/default/grub" ]; then
-    mv /usr/share/grub/default/grub /usr/share/grub/default/grub.backup
-fi
+sed -i 's/^#\?GRUB_THEME=.*/GRUB_THEME="\/boot\/grub\/themes\/lingmo\/theme.txt"/' /etc/default/grub
 
-cp /usr/share/grub/default/grub.lingmo /usr/share/grub/default/grub
-cp /usr/share/grub/default/grub.lingmo /etc/default/grub
+# Update GRUB config
+/usr/sbin/update-grub
