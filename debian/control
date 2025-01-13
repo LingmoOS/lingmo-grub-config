@@ -1,8 +1,8 @@
 Source: lingmo-grub-config
 Section: lingmo
 Priority: optional
-Maintainer: Elysia <c.elysia@foxmail.com>
-Uploaders: Elysia <c.elysia@foxmail.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
+Uploaders: Elysia <c.elysia@foxmail.com>, Lingmo OS Team <team@lingmo.org>
 Build-Depends: debhelper (>= 11)
 Standards-Version: 4.5.0
 
