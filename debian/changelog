@@ -1,3 +1,10 @@
+lingmo-grub-config (3.0.3+lingmo5u1) unstable; urgency=medium
+
+  * debian: add cmake to Build-Depends, bump compat to 13, add
+    debian/source/format (3.0 native), update distribution to unstable.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 04 Nov 2026 18:00:00 +0800
+
 lingmo-grub-config (3.0.2+lingmo3build1) helium; urgency=medium
 
   [Lingmo OS Team]

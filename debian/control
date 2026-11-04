@@ -3,8 +3,9 @@ Section: lingmo
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
 Uploaders: Elysia <c.elysia@foxmail.com>, Lingmo OS Team <team@lingmo.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.5.0
+Build-Depends: cmake,
+               debhelper-compat (= 13)
+Standards-Version: 4.7.2
 
 Package: lingmo-grub-config
 Architecture: any
