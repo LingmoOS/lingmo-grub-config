@@ -1,18 +1,13 @@
-+ font {
-    file = "Ubuntu-Regular-14.pf2"
-}
-
-+ font {
-    file = "Ubuntu-Medium-18.pf2"
-}
-
 desktop-color: "#121212"
 
 title-text:" "
 message-font: "Ubuntu Regular 14"
 message-color: "#757575"
-terminal-font: "Ubuntu Regular 14"
-terminal-box: "terminal_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
 
 + boot_menu {
   left = 25%
